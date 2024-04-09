@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.codestudy.dao.NoteDao">
+
+    <!--添加笔记-->
+    <insert id="NoteAdd">
+        insert into note (user_id, title, msg, img, annex, type) values (#{userId},#{title},#{msg},#{img},#{annex},#{annex})
+    </insert>
+
+    <!--根据ID查询笔记-->
+    <select id="NoteGetByID" resultType="com.codestudy.entity.Note">
+        select *
+        from note
+        where id = #{id};
+    </select>
+</mapper>
