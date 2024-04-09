@@ -23,7 +23,7 @@ public class LikesController {
     /**
      * 用户点赞
      */
-    @ApiOperation(value = "点赞")
+    @ApiOperation(value = "点赞",notes = "需要给文章id，active为0即未点赞，为1即点赞")
     @PostMapping("/dolike")
     public Result1 dolikes(@RequestBody Likes likes) {
         try {
